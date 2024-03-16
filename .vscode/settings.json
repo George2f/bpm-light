@@ -1,0 +1,7 @@
+{
+    "conventionalCommits.scopes": [
+        "bpm-light",
+        "bpm-vue",
+        "bpm-react"
+    ]
+}
