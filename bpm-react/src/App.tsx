@@ -90,9 +90,7 @@ export default function App() {
             style={{ backgroundColor: 'black' }}>
             <button
                 onClick={() => setMenuVisible((v) => !v)}
-                className={cn('grid h-full w-full grid-cols-1', {
-                    'grid-cols-2': split === 2 || split === 4,
-                })}
+                className={cn('flex h-full w-full items-center justify-center')}
                 id="button-main"
                 tabIndex={-1}>
                 <Blinker
@@ -142,7 +140,7 @@ export default function App() {
                         setRandomizeColors((v) => !v);
                     }}
                     onSplitColorsClick={() => {
-                        setSplit((v) => (split === 4 ? 1 : v * 2));
+                        setSplit((v) => (v === 4 ? 1 : v * 2));
                     }}
                     onBPMChange={(v) => setBpm(v)}
                     onTutorialClick={() => setCanRunTutorial(true)}

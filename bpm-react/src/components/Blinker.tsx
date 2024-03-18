@@ -1,3 +1,5 @@
+import { cn } from '../utils/cn';
+
 interface IBlinkerProps {
     beat: boolean;
     offBeat: boolean;
@@ -16,7 +18,10 @@ export default function Blinker({
     color2,
 }: IBlinkerProps) {
     return (
-        <>
+        <div
+            className={cn('grid h-full w-full grid-cols-1', {
+                'grid-cols-2': split === 2 || split === 4,
+            })}>
             <div
                 className="h-full w-full"
                 style={{
@@ -50,6 +55,6 @@ export default function Blinker({
                     />
                 </>
             ) : null}
-        </>
+        </div>
     );
 }

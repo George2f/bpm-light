@@ -51,24 +51,22 @@ export default function AutoAnalyzer({
     };
 
     return (
-        <div>
-            <Button
-                className={cn({
-                    'bg-zinc-100': listening,
-                })}
-                onClick={onAnalyseClick}
-                id={id}
-                disabled={listening}>
-                Auto
+        <Button
+            className={cn({
+                'bg-zinc-100': listening,
+            })}
+            onClick={onAnalyseClick}
+            id={id}
+            disabled={listening}>
+            Auto
+            <small>
                 <small>
                     <small>
-                        <small>
-                            <i> (Beta)</i>
-                        </small>
+                        <i> (Beta)</i>
                     </small>
                 </small>
-            </Button>
-        </div>
+            </small>
+        </Button>
     );
 }
 
