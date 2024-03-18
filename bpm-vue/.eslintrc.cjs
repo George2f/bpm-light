@@ -13,5 +13,15 @@ module.exports = {
         parser: '@typescript-eslint/parser',
         sourceType: 'module',
     },
-    rules: {},
+    rules: {
+        'vue/html-closing-bracket-newline': [
+            'error',
+            {
+                singleline: 'never',
+                multiline: 'never',
+            },
+        ],
+        '@typescript-eslint/no-explicit-any': 'warn',
+        '@typescript-eslint/no-unused-vars': 'warn',
+    },
 };
